@@ -38,7 +38,7 @@ public class MainWindow {
 	private int currentIndex = 0;
 	DefaultListModel<String> moonListModel;
 
-	private JFrame frame;
+	private JFrame frmNoMansAlmanac;
 
 	/**
 	 * Launch the application.
@@ -50,7 +50,7 @@ public class MainWindow {
 				
 				try {
 					MainWindow window = new MainWindow();
-					window.frame.setVisible(true);
+					window.frmNoMansAlmanac.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -72,9 +72,10 @@ public class MainWindow {
 		
 		
 		
-		frame = new JFrame();
-		frame.setBounds(100, 100, 259, 334);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmNoMansAlmanac = new JFrame();
+		frmNoMansAlmanac.setTitle("No Man's Almanac");
+		frmNoMansAlmanac.setBounds(100, 100, 259, 334);
+		frmNoMansAlmanac.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		try {
 		    for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
@@ -118,7 +119,7 @@ public class MainWindow {
 		lblFounder.setText(currentPlanet.getFounder());
 		panel.add(lblFounder);
 		
-		frame.getContentPane().add(panel, BorderLayout.NORTH);
+		frmNoMansAlmanac.getContentPane().add(panel, BorderLayout.NORTH);
 		
 		Component rigidArea = Box.createRigidArea(new Dimension(0, 25));
 		panel.add(rigidArea);
@@ -174,7 +175,7 @@ public class MainWindow {
 		JPanel navigationPanel = new JPanel();
 		navigationPanel.setBorder(emptyBorder);
 		
-		frame.getContentPane().add(navigationPanel, BorderLayout.SOUTH);
+		frmNoMansAlmanac.getContentPane().add(navigationPanel, BorderLayout.SOUTH);
 		
 		JButton btnPrevious = new JButton("Previous Planet");
 		navigationPanel.add(btnPrevious);
