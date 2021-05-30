@@ -29,6 +29,7 @@ import javax.swing.border.Border;
 import com.chezaster.objects.Planet;
 import com.chezaster.objects.StarSystem;
 import com.chezaster.scripts.PlanetGenScripts;
+import java.awt.Toolkit;
 
 
 public class MainWindow {
@@ -73,8 +74,9 @@ public class MainWindow {
 		
 		
 		frmNoMansAlmanac = new JFrame();
+		frmNoMansAlmanac.setIconImage(Toolkit.getDefaultToolkit().getImage(MainWindow.class.getResource("/com/chezaster/resources/cat128.png")));
 		frmNoMansAlmanac.setTitle("No Man's Almanac");
-		frmNoMansAlmanac.setBounds(100, 100, 259, 334);
+		frmNoMansAlmanac.setBounds(100, 100, 304, 311);
 		frmNoMansAlmanac.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		try {
